@@ -29,6 +29,9 @@
 #include "platforms/esp/32/led_sysdefs_esp32.h"
 #elif defined(FASTLED_SDL)
 #include "platforms/sdl/led_sysdefs_sdl.h"
+// we don't need SDL, but we need definitions that aren't the default from AVR
+#elif defined(ARDUINOONPC)
+#include "platforms/sdl/led_sysdefs_sdl.h"
 #else
 // AVR platforms
 #include "platforms/avr/led_sysdefs_avr.h"
